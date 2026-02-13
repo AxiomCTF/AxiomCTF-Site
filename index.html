@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Axiom CTF 2026</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="assets/styles/style.css" />
+</head>
+
+<body>
+	<div class="grid-bg"></div>
+	<div class="ambient ambient-1"></div>
+	<div class="ambient ambient-2"></div>
+	<div id="particles"></div>
+
+	<!-- NAV -->
+	<nav>
+		<a href="#" class="nav-logo">
+			<svg class="nav-logo-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="0%" stop-color="#C0392B" />
+						<stop offset="100%" stop-color="#6B0F0F" />
+					</linearGradient>
+				</defs>
+				<!-- Orbital rings -->
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(0 50 50)" opacity="0.9" />
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(60 50 50)" opacity="0.85" />
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(-60 50 50)" opacity="0.8" />
+				<!-- Hex nucleus -->
+				<polygon points="50,36 62,43 62,57 50,64 38,57 38,43" fill="url(#g1)" opacity="0.6" />
+				<circle cx="50" cy="50" r="9" fill="#9B2020" opacity="0.9" />
+			</svg>
+			<div class="nav-logo-text">AXIOM <span>CTF</span><br /><span>2026</span></div>
+		</a>
+
+		<div style="display: flex; align-items: center">
+			<div class="lang-switch">
+				<button class="lang-btn active" onclick="setLang('ru')">RU</button>
+				<button class="lang-btn" onclick="setLang('en')">EN</button>
+			</div>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section id="hero">
+		<div class="status-badge">
+			<span class="status-dot"></span>
+			<span data-ru="COMING SOON · 7–8 МАРТА" data-en="COMING SOON · MARCH 7–8,">COMING SOON · 7–8 МАРТА</span>
+		</div>
+
+		<div class="logo-wrap">
+			<svg width="180" height="180" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<linearGradient id="heroG1" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="0%" stop-color="#C0392B" />
+						<stop offset="50%" stop-color="#A85050" />
+						<stop offset="100%" stop-color="#6B0F0F" />
+					</linearGradient>
+					<linearGradient id="heroG2" x1="100%" y1="0%" x2="0%" y2="100%">
+						<stop offset="0%" stop-color="#9B2020" />
+						<stop offset="100%" stop-color="#4a0a0a" />
+					</linearGradient>
+					<filter id="glow">
+						<feGaussianBlur stdDeviation="3" result="coloredBlur" />
+						<feMerge>
+							<feMergeNode in="coloredBlur" />
+							<feMergeNode in="SourceGraphic" />
+						</feMerge>
+					</filter>
+				</defs>
+				<!-- Three orbital ellipses -->
+				<ellipse cx="100" cy="100" rx="90" ry="30" stroke="url(#g1)" stroke-width="11" fill="none"
+					transform="rotate(0 100 100)" opacity="0.9" />
+				<ellipse cx="100" cy="100" rx="90" ry="30" stroke="url(#g1)" stroke-width="11" fill="none"
+					transform="rotate(60 100 100)" opacity="0.85" />
+				<ellipse cx="100" cy="100" rx="90" ry="30" stroke="url(#g1)" stroke-width="11" fill="none"
+					transform="rotate(-60 100 100)" opacity="0.8" />
+				<!-- Nucleus hex — centered exactly at 100,100 -->
+				<polygon points="100,78 118,89 118,111 100,122 82,111 82,89" fill="url(#heroG2)" opacity="0.7"
+					stroke="#9B2020" stroke-width="2" />
+				<circle cx="100" cy="100" r="16" fill="#7a1a1a" opacity="0.95" />
+				<circle cx="100" cy="100" r="10" fill="#C0392B" opacity="0.7" />
+				<circle cx="100" cy="100" r="5" fill="#e05a4a" opacity="0.9" />
+			</svg>
+		</div>
+
+		<div class="hero-eyebrow" data-ru="Командное соревнование по кибербезопасности"
+			data-en="Team cybersecurity competition">
+			Командное соревнование по кибербезопасности
+		</div>
+		<h1 class="hero-title">
+			AXIOM <span class="hero-title-red">CTF</span>
+		</h1>
+		<div class="hero-year">2026</div>
+
+		<div class="hero-btns">
+			<a href="https://ctfd.4x10m.ru/register" target="_blank" class="btn-primary" data-ru="ЗАРЕГИСТРИРОВАТЬСЯ"
+				data-en="REGISTER NOW">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+			<a href="https://t.me/axiomctf" target="_blank" class="btn-outline">TELEGRAM</a>
+		</div>
+
+		<!-- COUNTDOWN -->
+		<div class="countdown-section">
+			<p class="countdown-label" data-ru="// до старта соревнования" data-en="// until competition starts">
+				// до старта соревнования
+			</p>
+			<div class="countdown-grid">
+				<div class="countdown-cell">
+					<span class="countdown-num" id="cd-days">00</span>
+					<span class="countdown-unit">days</span>
+				</div>
+				<div class="countdown-cell">
+					<span class="countdown-num" id="cd-hours">00</span>
+					<span class="countdown-unit">hours</span>
+				</div>
+				<div class="countdown-cell">
+					<span class="countdown-num" id="cd-mins">00</span>
+					<span class="countdown-unit">minutes</span>
+				</div>
+				<div class="countdown-cell">
+					<span class="countdown-num" id="cd-secs">00</span>
+					<span class="countdown-unit">seconds</span>
+				</div>
+			</div>
+			<p class="event-date-tag">
+				<span data-ru="Старт" data-en="Start">Старт</span>
+				<span>7 марта, 10:00</span> ·
+				<span data-ru="Финиш" data-en="End">Финиш</span>
+				<span>8 марта, 22:00</span> (MSK)
+			</p>
+		</div>
+	</section>
+
+	<div class="divider"></div>
+
+	<!-- CATEGORIES -->
+	<section id="categories">
+		<div class="section-inner">
+			<p class="section-tag reveal" data-ru="// категории заданий" data-en="// challenge categories">
+				// категории заданий
+			</p>
+			<h2 class="section-title reveal reveal-delay-1" data-ru="Что вас ждёт?" data-en="What awaits you?">
+				Что вас ждёт?
+			</h2>
+			<div class="categories-grid">
+				<div class="cat-card reveal reveal-delay-1">
+					<span class="cat-icon">🌐</span>
+					<div class="cat-name">WEB</div>
+					<div class="cat-desc" data-ru="Классические уязвимости веб-приложений"
+						data-en="Сдassic web application vulnerabilities">
+						Классические уязвимости веб-приложений
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-2">
+					<span class="cat-icon">🔬</span>
+					<div class="cat-name">REVERSE</div>
+					<div class="cat-desc" data-ru="Анализ бинарных файлов, обфускация, работа с дизассемблерами"
+						data-en="Binary analysis, obfuscation, working with disassemblers">
+						Анализ бинарных файлов, обфускация, работа с дизассемблерами
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-3">
+					<span class="cat-icon">🔍</span>
+					<div class="cat-name">FORENSIC</div>
+					<div class="cat-desc" data-ru="Анализ дампов памяти, логов, сетевого трафика и артефактов"
+						data-en="Memory dumps, log analysis, network traffic and artifact investigation">
+						Анализ дампов памяти, логов, сетевого трафика и артефактов
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-4">
+					<span class="cat-icon">🔐</span>
+					<div class="cat-name">CRYPTOGRAPHY</div>
+					<div class="cat-desc" data-ru="Взлом шифров, математические задачи и криптоанализ"
+						data-en="Cipher breaking, mathematical puzzles and cryptanalysis">
+						Взлом шифров, математические задачи и криптоанализ
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-1">
+					<span class="cat-icon">💥</span>
+					<div class="cat-name">PWN</div>
+					<div class="cat-desc" data-ru="Buffer overflow, ROP-цепочки, эксплуатация бинарей"
+						data-en="Buffer overflow, ROP chains, binary exploitation">
+						Buffer overflow, ROP-цепочки, эксплуатация бинарей
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-2">
+					<span class="cat-icon">🕵️</span>
+					<div class="cat-name">OSINT</div>
+					<div class="cat-desc" data-ru="Разведка по открытым источникам и цифровая криминалистика"
+						data-en="Open source intelligence and digital forensics">
+						Разведка по открытым источникам и цифровая криминалистика
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-3">
+					<span class="cat-icon">⚙️</span>
+					<div class="cat-name">ADMIN</div>
+					<div class="cat-desc" data-ru="Эскалация привилегий, конфигурации, DevOps-безопасность"
+						data-en="Privilege escalation, misconfigurations, DevOps security">
+						Эскалация привилегий, конфигурации, DevOps-безопасность
+					</div>
+				</div>
+				<div class="cat-card reveal reveal-delay-4">
+					<span class="cat-icon">🖼️</span>
+					<div class="cat-name">STEGANOGRAPHY</div>
+					<div class="cat-desc" data-ru="Скрытые сообщения в изображениях, аудио и прочих файлах"
+						data-en="Hidden messages in images, audio and other file formats">
+						Скрытые сообщения в изображениях, аудио и прочих файлах
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="divider"></div>
+
+	<!-- FORMAT -->
+	<section id="format">
+		<div class="section-inner">
+			<p class="section-tag reveal" data-ru="// формат участия" data-en="// participation format">
+				// формат участия
+			</p>
+			<h2 class="section-title reveal reveal-delay-1">
+				FAQ
+			</h2>
+			<div class="format-grid">
+				<div class="format-card reveal reveal-delay-1">
+					<div class="format-num">01 —</div>
+					<div class="format-heading" data-ru="ФОРМАТ JEOPARDY" data-en="JEOPARDY FORMAT">
+						ФОРМАТ JEOPARDY
+					</div>
+					<div class="format-text"
+						data-ru="Задания разделены по категориям и сложности. Решаете задачу — получаете очки. Чем сложнее задание и меньше команд решило его первыми, тем выше награда."
+						data-en="Challenges are split by category and difficulty. Solve a challenge — earn points. The harder the task and fewer teams solved it first, the bigger the reward.">
+						Задания разделены по категориям и сложности. Решаете задачу —
+						получаете очки. Чем сложнее задание и меньше команд решило его
+						первыми, тем выше награда.
+					</div>
+				</div>
+				<div class="format-card reveal reveal-delay-2">
+					<div class="format-num">02 —</div>
+					<div class="format-heading" data-ru="РАЗМЕР КОМАНДЫ" data-en="TEAM SIZE">
+						РАЗМЕР КОМАНДЫ
+					</div>
+					<div class="format-text"
+						data-ru="Участвуйте в одиночку или соберите команду до 5 человек. Каждый участник вносит вклад в общий результат. Координация — ключ к победе."
+						data-en="Play solo or assemble a team of up to 5 players. Every member contributes to the final score. Coordination is the key to victory.">
+						Участвуйте в одиночку или соберите команду до 5 человек. Каждый
+						участник вносит вклад в общий результат. Координация — ключ к
+						победе.
+					</div>
+				</div>
+				<div class="format-card reveal reveal-delay-3">
+					<div class="format-num">03 —</div>
+					<div class="format-heading" data-ru="36 ЧАСОВ СОРЕВНОВАНИЙ" data-en="36 HOURS OF HACKING">
+						36 ЧАСОВ СОРЕВНОВАНИЙ
+					</div>
+					<div class="format-text"
+						data-ru="Старт 7 марта в 10:00 MSK, финиш 8 марта в 22:00 MSK. 36 часов непрерывного хакинга, логики и командной работы."
+						data-en="Start March 7 at 10:00 MSK, end March 8 at 22:00 MSK. 36 hours of non-stop hacking, logic and teamwork.">
+						Старт 7 марта в 10:00 MSK, финиш 8 марта в 22:00 MSK. 36 часов
+						непрерывного хакинга, логики и командной работы.
+					</div>
+				</div>
+				<div class="format-card reveal reveal-delay-4">
+					<div class="format-num">04 —</div>
+					<div class="format-heading" data-ru="ОНЛАЙН-ПЛАТФОРМА" data-en="ONLINE PLATFORM">
+						ОНЛАЙН-ПЛАТФОРМА
+					</div>
+					<div class="format-text"
+						data-ru="Все задания доступны через официальный сайт. Нужен только браузер и мотивация. Следите за лидербордом в реальном времени."
+						data-en="All challenges are available via. All you need is a browser and motivation. Track the live leaderboard in real time.">
+						Все задания доступны через официальный сайт. Нужен
+						только браузер и мотивация. Следите за лидербордом в реальном
+						времени.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="divider"></div>
+
+	<!-- SCHEDULE -->
+	<section id="schedule">
+		<div class="section-inner">
+			<p class="section-tag reveal" data-ru="// расписание" data-en="// schedule">
+				// расписание
+			</p>
+
+			<h2 class="section-title reveal reveal-delay-1" data-ru="Таймлайн событий" data-en="Event Timeline">
+				Таймлайн событий
+			</h2>
+
+			<div class="schedule-wrap reveal reveal-delay-2">
+
+				<div class="sched-item">
+					<div class="sched-time" data-ru="7 МАРТА · 10:00 MSK" data-en="MARCH 7 · 10:00 MSK">
+						7 МАРТА · 10:00 MSK
+					</div>
+
+					<div class="sched-name" data-ru="СТАРТ CTF" data-en="CTF START">
+						СТАРТ CTF
+					</div>
+
+					<div class="sched-desc"
+						data-ru="Платформа открывается, задания становятся доступны всем командам. Начало гонки за флагами."
+						data-en="The platform opens, challenges become available to all teams. The flag race begins.">
+						Платформа открывается, задания становятся доступны всем командам.
+						Начало гонки за флагами.
+					</div>
+				</div>
+
+				<div class="sched-item">
+					<div class="sched-time" data-ru="7 МАРТА · ВЕСЬ ДЕНЬ" data-en="MARCH 7 · ALL DAY">
+						7 МАРТА · ВЕСЬ ДЕНЬ
+					</div>
+
+					<div class="sched-name" data-ru="АКТИВНАЯ ФАЗА" data-en="ACTIVE PHASE">
+						АКТИВНАЯ ФАЗА
+					</div>
+
+					<div class="sched-desc"
+						data-ru="36 часов непрерывного соревнования. Новые задания могут появляться в течение CTF."
+						data-en="36 hours of continuous competition. New challenges may be released during the CTF.">
+						36 часов непрерывного соревнования. Новые задания могут появляться
+						в течение CTF.
+					</div>
+				</div>
+
+				<div class="sched-item">
+					<div class="sched-time" data-ru="8 МАРТА · 22:00 MSK" data-en="MARCH 8 · 22:00 MSK">
+						8 МАРТА · 22:00 MSK
+					</div>
+
+					<div class="sched-name" data-ru="ФИНИШ CTF" data-en="CTF END">
+						ФИНИШ CTF
+					</div>
+
+					<div class="sched-desc"
+						data-ru="Платформа закрывается для отправки флагов. Итоговое распределение мест фиксируется."
+						data-en="The platform closes for flag submissions. Final standings are locked in.">
+						Платформа закрывается для отправки флагов. Итоговое распределение
+						мест фиксируется.
+					</div>
+				</div>
+
+				<div class="sched-item">
+					<div class="sched-time" data-ru="ПОСЛЕ СОРЕВНОВАНИЯ" data-en="AFTER THE EVENT">
+						ПОСЛЕ СОРЕВНОВАНИЯ
+					</div>
+
+					<div class="sched-name" data-ru="РЕЗУЛЬТАТЫ И РАЗБОРЫ" data-en="RESULTS & WRITE-UPS">
+						РЕЗУЛЬТАТЫ И РАЗБОРЫ
+					</div>
+
+					<div class="sched-desc"
+						data-ru="Публикация итогового лидерборда и авторских write-up'ов в Telegram-канале."
+						data-en="Final leaderboard and official write-ups published in the Telegram channel.">
+						Публикация итогового лидерборда и авторских write-up'ов в
+						Telegram-канале.
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="footer-logo">
+			AXIOM <span>CTF</span> 2026<br /><span
+				style="color: var(--text-dim); font-size: 7px; letter-spacing: 2px">BY
+				4X10M TEAM</span>
+		</div>
+
+		<ul class="footer-links">
+			<li><a href="https://ctftime.org/ctf/1510" target="_blank">CTFtime</a></li>
+			<li><a href="https://ctfd.4x10m.ru" target="_blank">Platform</a></li>
+			<li><a href="https://t.me/axiomctf" target="_blank">Telegram</a></li>
+		</ul>
+	</footer>
+
+	<script src="assets/scripts/sciript.js"></script>
+</body>
+
+</html>
