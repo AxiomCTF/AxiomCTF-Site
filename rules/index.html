@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title data-ru="Правила | Axiom CTF 2026" data-en="Rules | Axiom CTF 2026">Правила | Axiom CTF 2026</title>
+	<meta name="description"
+		content="Правила участия в Axiom CTF 2026: формат, размер команды, скоринг, разрешённые и запрещённые действия." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../assets/styles/style.css" />
+</head>
+
+<body>
+	<div class="grid-bg"></div>
+	<div class="ambient ambient-1"></div>
+	<div class="ambient ambient-2"></div>
+	<div id="particles"></div>
+
+	<nav>
+		<a href="../index.html" class="nav-logo">
+			<svg class="nav-logo-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="0%" stop-color="#C0392B" />
+						<stop offset="100%" stop-color="#6B0F0F" />
+					</linearGradient>
+				</defs>
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(0 50 50)" opacity="0.9" />
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(60 50 50)" opacity="0.85" />
+				<ellipse cx="50" cy="50" rx="46" ry="18" stroke="url(#g1)" stroke-width="6" fill="none"
+					transform="rotate(-60 50 50)" opacity="0.8" />
+				<polygon points="50,36 62,43 62,57 50,64 38,57 38,43" fill="url(#g1)" opacity="0.6" />
+				<circle cx="50" cy="50" r="9" fill="#9B2020" opacity="0.9" />
+			</svg>
+			<div class="nav-logo-text">AXIOM <span>CTF</span><br /><span>2026</span></div>
+		</a>
+
+		<div class="nav-right">
+			<a href="../index.html" class="nav-page-link" data-ru="ГЛАВНАЯ" data-en="HOME">ГЛАВНАЯ</a>
+			<div class="lang-switch">
+				<button class="lang-btn active" onclick="setLang('ru')">RU</button>
+				<button class="lang-btn" onclick="setLang('en')">EN</button>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section id="rules-hero">
+			<div class="section-inner">
+				<p class="section-tag reveal" data-ru="// правила участия" data-en="// participation rules">
+					// правила участия
+				</p>
+				<h1 class="section-title rules-title reveal reveal-delay-1" data-ru="Правила Axiom CTF 2026"
+					data-en="Axiom CTF 2026 Rules">
+					Правила Axiom CTF 2026
+				</h1>
+				<p class="section-subtitle reveal reveal-delay-2"
+					data-ru="Ниже собраны обязательные правила и организационные условия. Регистрация на CTF означает согласие с ними."
+					data-en="Below are the mandatory rules and organizational terms. By registering, you agree to them.">
+					Ниже собраны обязательные правила и организационные условия. Регистрация на CTF означает согласие с
+					ними.
+				</p>
+			</div>
+		</section>
+
+		<div class="divider"></div>
+
+		<section id="rules-list">
+			<div class="section-inner">
+				<div class="rules-grid">
+					<article class="rule-card reveal reveal-delay-1">
+						<div class="rule-num">01 —</div>
+						<h3 class="rule-heading" data-ru="ФОРМАТ СОРЕВНОВАНИЯ" data-en="COMPETITION FORMAT">ФОРМАТ
+							СОРЕВНОВАНИЯ</h3>
+						<p class="rule-text"
+							data-ru="Axiom CTF проходит в формате Jeopardy (online). Каждая команда решает задачи из разных категорий и отправляет флаги на официальную платформу."
+							data-en="Axiom CTF is held in Jeopardy format (online). Teams solve challenges from multiple categories and submit flags on the official platform.">
+							Axiom CTF проходит в формате Jeopardy (online). Каждая команда решает задачи из разных
+							категорий и
+							отправляет флаги на официальную платформу.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-2">
+						<div class="rule-num">02 —</div>
+						<h3 class="rule-heading" data-ru="ВРЕМЯ ПРОВЕДЕНИЯ" data-en="EVENT TIMING">ВРЕМЯ ПРОВЕДЕНИЯ</h3>
+						<p class="rule-text"
+							data-ru="Соревнование длится 36 часов: старт 7 марта 2026 в 10:00 (MSK), финиш 8 марта 2026 в 22:00 (MSK). Флаги, отправленные после финиша, не засчитываются."
+							data-en="The competition lasts 36 hours: starts on March 7, 2026 at 10:00 (MSK), ends on March 8, 2026 at 22:00 (MSK). Flags submitted after finish are not counted.">
+							Соревнование длится 36 часов: старт 7 марта 2026 в 10:00 (MSK), финиш 8 марта 2026 в 22:00
+							(MSK).
+							Флаги, отправленные после финиша, не засчитываются.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-3">
+						<div class="rule-num">03 —</div>
+						<h3 class="rule-heading" data-ru="КОМАНДА И АККАУНТЫ" data-en="TEAM AND ACCOUNTS">КОМАНДА И
+							АККАУНТЫ</h3>
+						<p class="rule-text"
+							data-ru="В команде может быть от 1 до 5 участников. Один человек может состоять только в одной команде и использовать только свой аккаунт."
+							data-en="A team may have from 1 to 5 participants. One person can be in only one team and must use only their own account.">
+							В команде может быть от 1 до 5 участников. Один человек может состоять только в одной
+							команде и
+							использовать только свой аккаунт.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-4">
+						<div class="rule-num">04 —</div>
+						<h3 class="rule-heading" data-ru="ФОРМАТ ФЛАГА" data-en="FLAG FORMAT">ФОРМАТ ФЛАГА</h3>
+						<p class="rule-text"
+							data-ru="Флаги имеют формат <code>AXIOM{...}</code>, если в условии задания не указано иное. Есть задания с динамическими флагами, которые генерируются индивидуально при каждом запуске."
+							data-en="Flags use the <code>AXIOM{...}</code> format unless stated otherwise in a challenge. Some tasks have dynamic flags generated individually for each launch.">
+							Флаги имеют формат <code>AXIOM{...}</code>, если в условии задания не указано иное. Есть
+							задания с динамическими флагами, которые генерируются индивидуально при каждом запуске.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-1">
+						<div class="rule-num">05 —</div>
+						<h3 class="rule-heading" data-ru="СИСТЕМА СКОРИНГА" data-en="SCORING SYSTEM">СИСТЕМА СКОРИНГА
+						</h3>
+						<p class="rule-text"
+							data-ru="Используется динамический скоринг: стоимость задачи уменьшается по мере роста числа решивших. Позиция в рейтинге определяется суммой очков."
+							data-en="Dynamic scoring is used: challenge value decreases as more teams solve it. The leaderboard is based on total score.">
+							Используется динамический скоринг: стоимость задачи уменьшается по мере роста числа
+							решивших.
+							Позиция в рейтинге определяется суммой очков.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-2">
+						<div class="rule-num">06 —</div>
+						<h3 class="rule-heading" data-ru="РАЗРЕШЁННЫЕ ИНСТРУМЕНТЫ" data-en="ALLOWED TOOLS">РАЗРЕШЁННЫЕ
+							ИНСТРУМЕНТЫ</h3>
+						<p class="rule-text"
+							data-ru="Можно использовать любые собственные инструменты, скрипты, публичные материалы и любые AI, кроме тех, которые будут отдельно запрещены организаторами в правилах или условиях конкретных заданий."
+							data-en="You may use your own tools, scripts, public materials, and any AI systems except those explicitly prohibited by organizers in the rules or in specific challenge statements.">
+							Можно использовать любые собственные инструменты, скрипты, публичные материалы и локальные
+							AI, кроме тех, которые будут отдельно запрещены организаторами в правилах или условиях
+							конкретных заданий.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-3">
+						<div class="rule-num">07 —</div>
+						<h3 class="rule-heading" data-ru="ЗАПРЕЩЁННЫЕ ДЕЙСТВИЯ" data-en="FORBIDDEN ACTIONS">ЗАПРЕЩЁННЫЕ
+							ДЕЙСТВИЯ</h3>
+						<p class="rule-text"
+							data-ru="Запрещены атаки на инфраструктуру организаторов, DoS, сканирование и действия за пределами инфраструктуры заданий."
+							data-en="Attacks against organizer infrastructure, DoS, scanning, and actions outside challenge scope are prohibited.">
+							Запрещены атаки на инфраструктуру организаторов, DoS, сканирование и действия за пределами
+							инфраструктуры заданий.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-4">
+						<div class="rule-num">08 —</div>
+						<h3 class="rule-heading" data-ru="БРУТФОРС И АВТОМАТИЗАЦИЯ"
+							data-en="BRUTE FORCE AND AUTOMATION">
+							БРУТФОРС И АВТОМАТИЗАЦИЯ</h3>
+						<p class="rule-text"
+							data-ru="Брутфорс флагов, флуд сабмитов и нагрузочные скрипты против платформы запрещены. Автоматизация допустима только в рамках решения самих тасков."
+							data-en="Flag brute-force, submit flooding, and load scripts against the platform are prohibited. Automation is allowed only within challenge-solving scope.">
+							Брутфорс флагов, флуд сабмитов и нагрузочные скрипты против платформы запрещены.
+							Автоматизация
+							допустима только в рамках решения самих тасков.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-1">
+						<div class="rule-num">09 —</div>
+						<h3 class="rule-heading" data-ru="ОБМЕН РЕШЕНИЯМИ" data-en="SOLUTION SHARING">ОБМЕН РЕШЕНИЯМИ
+						</h3>
+						<p class="rule-text"
+							data-ru="Передача флагов, хинтов и готовых решений между разными командами до окончания CTF запрещена и ведёт к дисквалификации."
+							data-en="Sharing flags, hints, or complete solutions between different teams before CTF end is prohibited and leads to disqualification.">
+							Передача флагов, хинтов и готовых решений между разными командами до окончания CTF запрещена
+							и
+							ведёт к дисквалификации.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-2">
+						<div class="rule-num">10 —</div>
+						<h3 class="rule-heading" data-ru="ПУБЛИКАЦИЯ WRITE-UP" data-en="WRITE-UP PUBLICATION">ПУБЛИКАЦИЯ
+							WRITE-UP</h3>
+						<p class="rule-text"
+							data-ru="Публиковать райтапы, разборы и исходники решений разрешено только после официального завершения соревнования."
+							data-en="Publishing write-ups, analyses, and solver code is allowed only after the official competition end.">
+							Публиковать райтапы, разборы и исходники решений разрешено только после официального
+							завершения
+							соревнования.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-3">
+						<div class="rule-num">11 —</div>
+						<h3 class="rule-heading" data-ru="АПЕЛЛЯЦИИ И FAIR PLAY" data-en="APPEALS AND FAIR PLAY">
+							АПЕЛЛЯЦИИ
+							И FAIR PLAY</h3>
+						<p class="rule-text"
+							data-ru="Соблюдайте принципы честной игры. Спорные ситуации и апелляции принимаются во время CTF в систему тикетов: <a href='https://support.4x10m.ru' target='_blank'>support.4x10m.ru</a>. Решение оргкомитета является окончательным."
+							data-en="Follow fair-play principles. Disputes and appeals are accepted during the CTF via the ticket system: <a href='https://support.4x10m.ru' target='_blank'>support.4x10m.ru</a>. Organizer decisions are final.">
+							Соблюдайте принципы честной игры. Спорные ситуации и апелляции принимаются во время CTF в
+							систему тикетов: <a href="https://support.4x10m.ru" target="_blank">support.4x10m.ru</a>.
+							Решение оргкомитета является окончательным.
+						</p>
+					</article>
+
+					<article class="rule-card reveal reveal-delay-4">
+						<div class="rule-num">12 —</div>
+						<h3 class="rule-heading" data-ru="ИЗМЕНЕНИЯ ПРАВИЛ" data-en="RULE UPDATES">ИЗМЕНЕНИЯ ПРАВИЛ</h3>
+						<p class="rule-text"
+							data-ru="Организаторы могут уточнять правила и условия по ходу CTF. Все важные изменения публикуются в официальном Telegram-канале: <a href='https://t.me/axiomctf' target='_blank'>@axiomctf</a>."
+							data-en="Organizers may clarify rules and terms during the CTF. All important updates are published in the official Telegram channel: <a href='https://t.me/axiomctf' target='_blank'>@axiomctf</a>.">
+							Организаторы могут уточнять правила и условия по ходу CTF. Все важные изменения публикуются
+							в официальном Telegram-канале: <a href="https://t.me/axiomctf"
+								target="_blank">@axiomctf</a>.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<div class="divider"></div>
+
+		<section id="rules-extra">
+			<div class="section-inner">
+				<p class="section-tag reveal" data-ru="// важно" data-en="// important">
+					// важно
+				</p>
+				<h2 class="section-title reveal reveal-delay-1" data-ru="Коротко о главном" data-en="Quick Summary">
+					Коротко о главном
+				</h2>
+				<div class="format-grid">
+					<div class="format-card reveal reveal-delay-1">
+						<div class="format-num">A1 —</div>
+						<div class="format-heading" data-ru="ЧТО МОЖНО" data-en="WHAT IS ALLOWED">ЧТО МОЖНО</div>
+						<div class="format-text"
+							data-ru="Решать задания любыми техническими средствами, обсуждать идеи внутри своей команды, использовать публичные источники и собственные наработки."
+							data-en="Solve challenges with any technical means, discuss ideas within your team, and use public sources and your own materials.">
+							Решать задания любыми техническими средствами, обсуждать идеи внутри своей команды,
+							использовать
+							публичные источники и собственные наработки.
+						</div>
+					</div>
+					<div class="format-card reveal reveal-delay-2">
+						<div class="format-num">A2 —</div>
+						<div class="format-heading" data-ru="ЧЕГО ЛУЧШЕ ИЗБЕГАТЬ" data-en="WHAT TO AVOID">ЧЕГО ЛУЧШЕ
+							ИЗБЕГАТЬ</div>
+						<div class="format-text"
+							data-ru="Любой активности, которая может нарушить стабильность платформы: агрессивный скан, массовые запросы, безлимитные циклы сабмитов."
+							data-en="Any activity that may impact platform stability: aggressive scanning, mass requests, and unlimited submit loops.">
+							Любой активности, которая может нарушить стабильность платформы: агрессивный скан, массовые
+							запросы, безлимитные циклы сабмитов.
+						</div>
+					</div>
+					<div class="format-card reveal reveal-delay-3">
+						<div class="format-num">A3 —</div>
+						<div class="format-heading" data-ru="ГДЕ СЛЕДИТЬ ЗА НОВОСТЯМИ" data-en="WHERE TO TRACK UPDATES">
+							ГДЕ
+							СЛЕДИТЬ ЗА НОВОСТЯМИ</div>
+						<div class="format-text"
+							data-ru="Официальные объявления, уточнения правил и ответы организаторов публикуются в Telegram: <a href='https://t.me/axiomctf' target='_blank'>@axiomctf</a>."
+							data-en="Official announcements, rule clarifications, and organizer updates are posted in Telegram: <a href='https://t.me/axiomctf' target='_blank'>@axiomctf</a>.">
+							Официальные объявления, уточнения правил и ответы организаторов публикуются в Telegram:
+							<a href="https://t.me/axiomctf" target="_blank">@axiomctf</a>.
+						</div>
+					</div>
+					<div class="format-card reveal reveal-delay-4">
+						<div class="format-num">A4 —</div>
+						<div class="format-heading" data-ru="ЕСЛИ НАШЛИ ПРОБЛЕМУ" data-en="IF YOU FOUND AN ISSUE">ЕСЛИ
+							НАШЛИ ПРОБЛЕМУ</div>
+						<div class="format-text"
+							data-ru="Если нашли баг платформы или некорректность в задании, сразу сообщите об этом в тикет-систему: <a href='https://support.4x10m.ru' target='_blank'>support.4x10m.ru</a>."
+							data-en="If you found a platform bug or a challenge issue, report it immediately via the ticket system: <a href='https://support.4x10m.ru' target='_blank'>support.4x10m.ru</a>.">
+							Если нашли баг платформы или некорректность в задании, сразу сообщите об этом в
+							тикет-систему:
+							<a href="https://support.4x10m.ru" target="_blank">support.4x10m.ru</a>.
+						</div>
+					</div>
+				</div>
+
+				<div class="rules-cta reveal reveal-delay-4">
+					<a href="https://ctfd.4x10m.ru/register" target="_blank" class="btn-primary"
+						data-ru="ПЕРЕЙТИ К РЕГИСТРАЦИИ" data-en="GO TO REGISTRATION">ПЕРЕЙТИ К РЕГИСТРАЦИИ</a>
+					<a href="https://t.me/axiomctf" target="_blank" class="btn-outline">TELEGRAM</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-logo">
+			AXIOM <span>CTF</span> 2026<br /><span
+				style="color: var(--text-dim); font-size: 7px; letter-spacing: 2px">BY
+				4X10M TEAM</span>
+		</div>
+
+		<ul class="footer-links">
+			<li><a href="https://ctftime.org/ctf/1510" target="_blank">CTFtime</a></li>
+			<li><a href="https://ctfd.4x10m.ru" target="_blank">Platform</a></li>
+			<li><a href="https://t.me/axiomctf" target="_blank">Telegram</a></li>
+		</ul>
+	</footer>
+
+	<script src="../assets/scripts/sciript.js"></script>
+</body>
+
+</html>
