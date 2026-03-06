@@ -1012,6 +1012,89 @@ section {
   line-height: 1.6;
 }
 
+/* ── SPONSORS ── */
+#sponsors {
+  padding: 100px 0;
+}
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+.sponsor-card {
+  position: relative;
+  padding: 34px 30px;
+  background: var(--bg-card);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 14px) 0,
+    100% 14px,
+    100% 100%,
+    0 100%
+  );
+}
+.sponsor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(192, 57, 43, 0.12),
+    rgba(192, 57, 43, 0) 42%
+  );
+  pointer-events: none;
+}
+.sponsor-card:hover {
+  border-color: rgba(192, 57, 43, 0.45);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.34);
+  transform: translateY(-3px);
+}
+.sponsor-badge {
+  display: inline-block;
+  font-family: var(--mono-font);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--crimson-bright);
+  margin-bottom: 14px;
+}
+.sponsor-name {
+  font-family: var(--pixel-font);
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-white);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.sponsor-meta {
+  font-family: var(--mono-font);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+.sponsor-text {
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+.sponsor-link {
+  font-family: var(--mono-font);
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--crimson-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(192, 57, 43, 0.3);
+  transition: all 0.2s ease;
+}
+.sponsor-link:hover {
+  color: var(--text-white);
+  border-bottom-color: rgba(240, 240, 240, 0.35);
+}
+
 /* ── FOOTER ── */
 footer {
   position: relative;
@@ -1243,6 +1326,13 @@ footer {
   }
   .hero-year {
     font-size: 56px;
+  }
+  .sponsor-card {
+    padding: 28px 24px;
+  }
+  .sponsor-meta,
+  .sponsor-text {
+    font-size: 14px;
   }
   footer {
     padding: 32px 24px;
