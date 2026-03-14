@@ -78,9 +78,9 @@ function updateCountdown() {
 
         liveLabel.textContent =
             currentLang === "ru"
-                ? "// CTF идёт прямо сейчас!"
-                : "// CTF is live right now!";
-        liveLabel.style.color = "#5a9a5a";
+                ? "// отборочный этап завершён"
+                : "// qualifiers completed";
+        liveLabel.style.color = "#9aa7c7";
         return;
     }
 

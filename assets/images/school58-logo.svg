@@ -1,0 +1,9 @@
+<svg width="692" height="682" viewBox="0 0 692 682" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M52 36H241L52 228V36Z" fill="#0B0A63"/>
+  <path d="M0 352L208 144C271 177 311 245 311 321C311 432 221 522 111 522C66 522 25 507 0 483V352Z" fill="#FF6A21"/>
+  <path d="M393 99C393 25 453 0 488 0H541C585 0 625 28 645 62L488 198C433 177 393 142 393 99Z" fill="#F31507"/>
+  <path d="M374 352L582 144C646 177 686 245 686 321C686 432 596 522 486 522C441 522 399 507 374 483V352Z" fill="#EEB43A"/>
+  <text x="46" y="645" fill="#0B0A63" font-family="Arial, Helvetica, sans-serif" font-size="145" font-weight="700" letter-spacing="4">
+    ШКОЛА
+  </text>
+</svg>
